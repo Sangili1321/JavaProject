@@ -2,6 +2,7 @@ package driver;
 
 import org.openqa.selenium.WebDriver;
 
+//This class is to control the driver initialization
 public final class DriverManager {
 
     private DriverManager() {}
