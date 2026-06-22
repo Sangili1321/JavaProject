@@ -7,7 +7,6 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-    protected WebDriver driver;
 
     //High priority of browser setup will be given to CLI -Dbrowser value
     //Next it will give to TestNG
@@ -16,7 +15,6 @@ public class BaseTest {
     public void setUp(@Optional("chrome") String browser) {
         String browserValue = System.getProperty("browser", browser);
         DriverFactory.initDriver(browserValue);
-        driver = DriverManager.getDriver();
     }
     /*
     When you use Driver.init() it will create an instance and set the thread local
